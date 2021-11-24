@@ -1,9 +1,14 @@
-num1 = input("Text: ")
-num2 = [int(i) for i in arr1]
-N = len(num1)
-for x in range(0, N):
-    for y in range(x + 1, N):
-        if num2[x] == num2[y]:
-            print("Есть дубли")
-            quit()
-print("Нет дублей")
+num1 = list(input("Введите число: "))
+num2 = [int(x) for x in num1]
+
+trigger = 0
+for x in range(0, 10):
+    y = num2.count(x)
+    if y > 1:
+        print("Найден дубль")
+        trigger = 1
+        break
+
+if trigger == 0:
+    print("Дубль не найден")
+
