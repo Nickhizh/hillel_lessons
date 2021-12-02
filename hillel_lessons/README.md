@@ -9,3 +9,4 @@ Hillel Introduction to Python 09.11.21
 ### Lesson 3. Операторы, if.. elif.. else 
 ### Lesson 4. Циклы, строки
 ### Lesson 5. Форматирование строк,Генератор случайных чисел
+### Lesson 6. Встроенные колекции (часть 1)
