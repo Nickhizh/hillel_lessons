@@ -12,15 +12,3 @@ print(f" {len([x for x in lst_1 + lst_2 if (lst_1 + lst_2).count(x) == 1])} ун
 # print(f"В первом списке {len([x for x in lst_1 if lst_1.count(x) == 1 and x not in lst_2])} уникальных значений, "
 #       f"а во втором {len([x for x in lst_2 if lst_2.count(x) == 1 and x not in lst_1])}"
 #       )
-
-
-
-
-
-
-
-
-
-
-
-
