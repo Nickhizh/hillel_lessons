@@ -12,6 +12,7 @@ for key in some_string.split():
 
 # нахожу максимальное значение повторений
 max_value = 0
+result = 0
 for key, value in some_dict.items():
     if max_value <= value:
         max_value = value
