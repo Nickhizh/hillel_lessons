@@ -1,6 +1,7 @@
 # Вариант для одной строчки
-# print([x for x in range(2, 101) if not [n for n in range(2, x) if not x % n]])
+print([x for x in range(2, 101) if not [n for n in range(2, x) if not x % n]])
 
+# Вариант функции
 def findprime():
     for i in range(1, 101):
         deli = []
