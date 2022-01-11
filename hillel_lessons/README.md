@@ -14,3 +14,4 @@ Hillel Introduction to Python 09.11.21
 ### Homework 8. Встроенные колекции (часть 3) Множества
 ### Homework 9. Функции
 ### Homework 10. Декораторы
+### Homework 11. Алгоритмы
