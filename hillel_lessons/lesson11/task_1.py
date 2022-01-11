@@ -1,7 +1,7 @@
 import random
 
 
-def sort_fun():
+def sort_matrix():
     # сортируем столбы по возрастанию сумм
     list_sum = [sum([matrix[index_col][i] for index_col in range(m)]) for i in
                 range(m)]
@@ -39,16 +39,14 @@ def sort_fun():
                         matrix[i][coll], matrix[j][coll] = matrix[j][coll], \
                                                            matrix[i][coll]
                         flag = True
-    print("Отсортировано", *matrix, sep='\n')
+    print("Отсортировано:", *matrix, sep='\n')
+    print([sum([row[i] for row in matrix]) for i in range(0, len(matrix[0]))])
 
 
 m = int(input('m = '))
-
 matrix = [[random.randint(1, 50) for j in range(m)] for i in range(m)]
 
-print("До сортировки", *matrix, sep='\n')
+print("До сортировки:", *matrix, sep='\n')
+print([sum([row[i] for row in matrix]) for i in range(0, len(matrix[0]))], "\n")
 
-print()
-
-sort_fun()
-
+sort_matrix()
