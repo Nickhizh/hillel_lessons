@@ -1,6 +1,10 @@
-def findsum():
-    nums = [int(x) for x in input("Введите числа: ").split()]
-    dgt = int(input("Введите число: "))
+""" Сначала сделал функцию с вводом значений через консоль, но потом перечитал
+условие и сделал согласно нему. Часть старого кода закоментил
+"""
+
+def findsum(nums, dgt):
+    # nums = [int(x) for x in input("Введите числа: ").split()]
+    # dgt = int(input("Введите число: "))
     size = len(nums)
 
     for i in range(0, size - 1):
@@ -12,4 +16,11 @@ def findsum():
     return False
 
 
-findsum()
+num1 = [1, 2, 3, 4]
+num2 = 6
+bom1 = [1, 20, 12, 5, 104, 8]
+bom2 = 20
+
+
+findsum(num1, num2)
+findsum(bom1, bom2)
