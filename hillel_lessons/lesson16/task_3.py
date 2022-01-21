@@ -2,7 +2,7 @@ class TriangleChecker:
     def __init__(self, storony):
         self.storony = storony
 
-    def triangle(self):
+    def is_triangle(self):
         if all(isinstance(side, (int, float)) for side in self.storony):
             if all(side > 0 for side in self.storony):
                 sortstorony = sorted(self.storony)
