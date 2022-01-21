@@ -14,7 +14,6 @@ class Buffer:
     def get_current_part(self):
         # возврат сохраненных в текущий момент элементов последовательности
         # в порядке, в котором они были добавлены
-        pass
         print(self.num)
         return self.num
 
