@@ -7,8 +7,7 @@ UI = '''
 3. Поиск
 4. Изменить контакт
 5. Удалить контакт
-6. Удалить все
-7. Сохранить и выйти
+6. Сохранить и выйти
 '''
 
 
@@ -39,6 +38,7 @@ class Application(object):
                 self.persons = pickle.load(person_list)
 
     def add(self):
+        # Добавить новый контакт
         name, surname, address, phone, birthday = self.getdetails()
         if name not in self.persons:
             self.persons[name] = Person(name, surname, address, phone, birthday)
@@ -46,6 +46,7 @@ class Application(object):
             print("Такой контакт уже существует")
 
     def viewall(self):
+        # Просмотреть список контактов
         if self.persons:
             print("{:>5} {:>15} {:>15} {:>15} {:>18}".format('Имя', 'Фамилия', 'Адрес', 'Телефон', 'Дата рождения'))
             for person in self.persons.values():
@@ -54,6 +55,7 @@ class Application(object):
             print("Записная книжка пуста")
 
     def search(self):
+        # Поиск по имени
         name = input("Введите имя: ")
         if name in self.persons:
             print(self.persons[name])
@@ -61,6 +63,7 @@ class Application(object):
             print("Контакт не найден")
 
     def getdetails(self):
+        # Получение данных для изменения
         name = input("Имя: ")
         surname = input("Фамилия: ")
         address = input("Адрес: ")
@@ -69,6 +72,7 @@ class Application(object):
         return name, surname, address, phone, birthday
 
     def update(self):
+        # Изменение контакта
         name = input("Введите имя: ")
         if name in self.persons:
             print("Найдено. Продолжить изменения.")
@@ -79,15 +83,13 @@ class Application(object):
             print("Контакт не найден")
 
     def delete(self):
+        # Удаление контакта
         name = input("Введите Имя для удаления: ")
         if name in self.persons:
             del self.persons[name]
             print("Контакт удален")
         else:
             print("Контакт не найден")
-
-    def reset(self):
-        self.persons = {}
 
     def __del__(self):
         with open(self.database, 'wb') as db:
@@ -114,8 +116,6 @@ def main():
         elif choice == '5':
             app.delete()
         elif choice == '6':
-            app.reset()
-        elif choice == '7':
             print("Сохранено")
         else:
             print("Неверный ввод.")
