@@ -12,7 +12,7 @@ import tkinter as tk
 import contact_book_module as cb
 
 
-list_info = [0 for i in range(6)]
+list_info = [0 for i in range(5)]
 
 
 def lift_frame(frame_name):
