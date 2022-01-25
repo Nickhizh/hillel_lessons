@@ -15,6 +15,6 @@ ___
 `cd D:\Develop\pythonlesson\ для Windows`
 
 `cd /home/user/projects/pythonlesson для Linux`
-+ Выполнить команду: git clone https://github.com/Lady3mlnm/calculator
++ Выполнить команду: git clone https://github.com/Nickhizh/hillel_lessons.git
 
 Информация по работе с Git: https://git-scm.com/book/ru/v1
